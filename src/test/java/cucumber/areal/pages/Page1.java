@@ -3,6 +3,10 @@ package cucumber.areal.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+//Тут на конкретной странице мы выбираем необходимые элементы и (при необходимости) выполняем с ними какие-то действия
+// в отдельных методах. После чего в основных классах просто получаем отсюда элементы/элементы с какими-то действиями
+// с ними. Это паттерн "Page object".
+
 public class Page1 {
     private By button1minute = By.xpath("//section[@id='secpick2']//b[contains(text(), '1 Min')]");
     private By button2minute = By.xpath("//section[@id='secpick2']//b[contains(text(), '2 Min')]");
