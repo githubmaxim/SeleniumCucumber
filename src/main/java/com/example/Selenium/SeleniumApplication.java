@@ -17,6 +17,10 @@ import java.util.Set;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 
+//Видео https://www.youtube.com/watch?v=L2jMIJy0u90
+
+
+
 public class SeleniumApplication {
 
 	public static void main(String[] args) {
@@ -26,8 +30,8 @@ public class SeleniumApplication {
 //		WebDriver driver = new ChromeDriver();
 //
 //		// Ожидание выполнения какого то условия устанавливаем на 10 секунд (см. строка 115)
-////		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		// Устанавливаем неявное время ожидания перед выбрасыванием ошибки о не нахождении элемента на странице на 10 секунд
+////		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); //далее используя метод "until()", мы в его скобки передаем класс "ExpectedConditions" у которого есть больше 40-ка методов ожидания чего угодно(элемент появился/пропал, чтобы стал кликабельным, URL-адресс текущей страницы содержит определенный текст и т.д.)
+		// Устанавливаем неявное время ожидания перед выбрасыванием ошибки о не нахождении элемента на странице на 10 секунд для любого поиска "driver.findElement()"
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //
 //		driver.get("https://google.com");
@@ -97,7 +101,8 @@ public class SeleniumApplication {
 //		}
 
 
-//       // Ожидание исчезновения элемента из DOM (со страницы) - обязательно использовать при переходе на следующую страницу!
+//       // Ожидание исчезновения элемента из DOM (со страницы) - использовать при переходе на следующую страницу, в случае
+//       когда не загружается полностью новая страница, а теже элементы на листе просто заполняются новыми данными/надписями
 //		WebDriver driver3 = new ChromeDriver();
 //		driver3.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		WebDriverWait wait3 = new WebDriverWait(driver3, Duration.ofSeconds(10));
@@ -199,7 +204,7 @@ public class SeleniumApplication {
 //			driver5.get("http://127.0.0.1:5500/index.html"); //открываем в окне "window2" туже страницу и можем с ней выполнять какие-то действия. Причем Chrome (в отличие от других браузеров) откроет ее как новую вкладку, а не новое окно
 //			Thread.sleep(3000);
 //			driver5.close(); //закрываем окно "window2"
-//			driver5.switchTo().window(window1); //переключаемся на окно "window1" и теперь можем уже с ней выполнять какие-то действия
+//			driver5.switchTo().window(window1); //переключаемся на окно "window1" и теперь можем уже с нем выполнять какие-то действия
 //			Thread.sleep(3000);
 //
 //		} catch (InterruptedException e) {
@@ -242,22 +247,22 @@ public class SeleniumApplication {
 
 
 
-		//Использование тестирования через Assert
-		WebDriver driver7 = new ChromeDriver();
-		driver7.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebDriverWait wait7 = new WebDriverWait(driver7, Duration.ofSeconds(10));
-
-		try {
-			driver7.get("http://127.0.0.1:5500/index.html");
-			Thread.sleep(5000);
-
-			String title = driver7.getTitle();
-			assertThat(title).isEqualTo("Documenttttt");
-
-		} catch (InterruptedException e) {e.printStackTrace();
-		} catch (AssertionFailedError e) {
-			System.out.println(e.getMessage());
-			System.out.println("Fuck");
-		} finally { driver7.quit();	}
+//		//Использование тестирования через Assert
+//		WebDriver driver7 = new ChromeDriver();
+//		driver7.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		WebDriverWait wait7 = new WebDriverWait(driver7, Duration.ofSeconds(10));
+//
+//		try {
+//			driver7.get("http://127.0.0.1:5500/index.html");
+//			Thread.sleep(5000);
+//
+//			String title = driver7.getTitle();
+//			assertThat(title).isEqualTo("Documenttttt");
+//
+//		} catch (InterruptedException e) {e.printStackTrace();
+//		} catch (AssertionFailedError e) {
+//			System.out.println(e.getMessage());
+//			System.out.println("Fuck");
+//		} finally { driver7.quit();	}
 	}
 }

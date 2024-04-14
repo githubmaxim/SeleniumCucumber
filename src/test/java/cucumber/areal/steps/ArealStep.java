@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalTime;
 
+//Видео https://www.youtube.com/watch?v=V0msKgJEi3o
+
 public class ArealStep {
     Page1 page1 = new Page1();
     Page2 page2 = new Page2();
@@ -33,7 +35,7 @@ public class ArealStep {
 
     String fileWithPath = "D:\\Java\\Project IDEA\\Selenium\\src\\test\\java\\cucumber\\areal\\screen\\scr";
 
-// SCENARIO
+// SCENARIO 1
     @Given("open Webdriver1 for site {string}")
     public void openWebdriver1ForSite(String url) {
         System.setProperty("webdriver.chrome.driver", "D:\\Java\\Selenium\\chromedriver.exe");
@@ -104,7 +106,7 @@ public class ArealStep {
 //            instance1.webDriver1.quit();
 //        }
     }
-// Отдельный закрывающий драйвер метод не использовать, т.к. в случае падения проверки в предыдущем методе, код
+// Отдельный, закрывающий драйвер, метод не использовать, т.к. в случае падения проверки в предыдущем методе, код
 // этого метода выполнен не будет. И если необходимо закрыть драйвер именно в этом классе, то в предыдущем
 // методе нужно добавить блок try/catch/finally и в finally сделать закрытие драйвера.
 //    @And("close Webdriver1")
@@ -176,7 +178,7 @@ public class ArealStep {
 //        }
     }
 
-// Отдельный закрывающий драйвер метод не использовать, т.к. в случае падения проверки в предыдущем методе, код
+// Отдельный, закрывающий драйвер, метод не использовать, т.к. в случае падения проверки в предыдущем методе, код
 // этого метода выполнен не будет. И если необходимо закрыть драйвер именно в этом классе, то в предыдущем
 // методе нужно добавить блок try/catch/finally и в finally сделать закрытие драйвера.
 //    @And("close Webdriver2")

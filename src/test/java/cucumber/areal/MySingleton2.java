@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 //Сингтон нужен если необходимо WebDriver запустить в классе для @Befor/Background, потом передать его в класс для
-// Scenario, потом закрыть его в классе для @After. При этом нужно не создавать новых объектов класса.
+// Scenario, потом закрыть его в классе для @After и при этом нужно не создавать новых объектов класса.
 public class MySingleton2 {
     private static volatile MySingleton2 instance2;
 

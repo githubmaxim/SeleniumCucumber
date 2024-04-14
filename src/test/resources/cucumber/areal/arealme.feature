@@ -17,7 +17,7 @@ Feature: Test Website "Areal.me"
 
   Scenario: The bot two enters words itself  №2
     Given open Webdriver2 for site "https://www.arealme.com/typing-test/ru/#google_vignette"
-#    Next point is not necessary because We are on this tab
+#    The next point is not necessary because We are already on the page where the two-minute cycle is selected
 #    Given choose test - 2 minute
     When start the test №2
     And enter symbols of the line during 2 minute  №2

@@ -23,11 +23,13 @@ public class Page1 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.findElement(button2minute).click(); }
-
+        driver.findElement(button2minute).click();
+    }
     public void pressGo1(WebDriver driver){
         driver.findElement(buttonGo).click();
     }
-    public void pressGo2(WebDriver driver) { driver.findElement(buttonGo).click(); }
+    public void pressGo2(WebDriver driver) {
+        driver.findElement(buttonGo).click();
+    }
 
 }
